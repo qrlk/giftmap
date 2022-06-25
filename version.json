@@ -1,5 +1,6 @@
 {
   "latest": "01.01.2021-1",
   "updateurl": "https://raw.githubusercontent.com/qrlk/giftmap/main/!giftmap.lua",
-  "changelog": "https://github.com/qrlk/giftmap/blob/main/CHANGELOG.md"
+  "changelog": "https://github.com/qrlk/giftmap/blob/main/CHANGELOG.md",
+  "telemetry": "http://qrlk.me/dev/moonloader/giftmap/stats.php"
 }
