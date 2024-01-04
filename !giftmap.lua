@@ -1,7 +1,7 @@
 require 'lib.moonloader'
 
 script_name("/giftmap")
-script_version("04.01.2024")
+script_version("04.01.2024-1")
 script_author("Serhiy_Rubin", "qrlk")
 script_properties("work-in-pause")
 script_url("https://github.com/qrlk/giftmap")
@@ -72,7 +72,7 @@ function main()
           end
           if checkpoints[id] then
             deleteCheckpoint(checkpoints[id].cp)
-            checkpoint[id] = nil
+            checkpoints[id] = nil
           end
         end
         map, checkpoints = {}, {}
