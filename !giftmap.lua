@@ -1,7 +1,7 @@
 require 'lib.moonloader'
 
 script_name("/giftmap")
-script_version("04.01.2024-1")
+script_version("05.01.2024")
 script_author("Serhiy_Rubin", "qrlk")
 script_properties("work-in-pause")
 script_url("https://github.com/qrlk/giftmap")
@@ -100,12 +100,12 @@ function main()
         y = 516.3837890625,
         z = 30.078100204468
       },
-      xx275990234375 = {
+      x275990234375 = {
         x = 2759.90234375,
         y = 1456.5776367188,
         z = 10.849364280701
       },
-      xx1792642578125 = {
+      x1792642578125 = {
         x = 1792.642578125,
         y = -1146.4171142578,
         z = 23.882947921753
@@ -525,9 +525,9 @@ function main()
         y = -1837.5211181641,
         z = 12.615438461304
       }
-    }, "gift2024")
+    }, "gift2024-2")
 
-  inicfg.save(map_ico, "gift2024")
+  inicfg.save(map_ico, "gift2024-2")
 
   sampAddChatMessage((chatTag .. " by {2f72f7}Serhiy_Rubin{ffffff} & {348cb2}qrlk{ffffff} successfully loaded!"), -1)
 
@@ -537,7 +537,7 @@ function main()
       changeBlipColour(map[key].blip, value)
       map[key].colour = value
       if value == 0x00FFFFFF then
-        addOneOffSound(0.0, 0.0, 0.0, 1139)
+        addOneOffSound(0.0, 0.0, 0.0, 31205)
         table.insert(TRACE_GIFTS, key)
       end
     end
@@ -653,11 +653,13 @@ function sampev.onCreatePickup(id, model, pickupType, pos)
               downloadUrlToFile("http://qrlk.me:13629/" .. encodeJson(message))
 
               if wh then
-                addOneOffSound(0.0, 0.0, 0.0, 31205)
+                addOneOffSound(0.0, 0.0, 0.0, 1147)
+
+                printStyledString("YOU FOUND A NEW POS", 5000, 5)
                 --downloadUrlToFile("http://qrlk.me:13629/" .. encodeJson(message))
 
                 map_ico["x" .. tostring(gift_string)] = { x = pos.x, y = pos.y, z = pos.z }
-                inicfg.save(map_ico, "gift2024")
+                inicfg.save(map_ico, "gift2024-2")
               end
             end
           end
