@@ -537,7 +537,7 @@ function main()
       changeBlipColour(map[key].blip, value)
       map[key].colour = value
       if value == 0x00FFFFFF then
-        addOneOffSound(0.0, 0.0, 0.0, 31205)
+        addOneOffSound(0.0, 0.0, 0.0, 1139)
         table.insert(TRACE_GIFTS, key)
       end
     end
